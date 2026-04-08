@@ -1,9 +1,16 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, Button } from 'react-native'
 import TextoCentral from '../components/TextoCentral'
+import PassoStack from '../components/PassoStack'
 
-export default props => (
-    <TextoCentral corFundo = 'red'>
-        Tela A
-    </TextoCentral>
-)
+export default props => {
+
+    return (
+        <PassoStack {...props} avancar = "TelaB">
+            <TextoCentral corFundo = 'red'>
+                Tela A
+            </TextoCentral>
+        </PassoStack>
+
+    )
+}
