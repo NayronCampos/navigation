@@ -2,14 +2,20 @@ import React from 'react'
 import { View, Text } from 'react-native'
 
 export default props => {
-    <View style = {{
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
+    return (
+        <View style = {{
+            flex: 1,
+            alignItems: 'center',
+            justifyContent: 'center',
+            backgroundColor: props.corFundo || '#000',
         }}>
 
-        <Text style = {{ fontSize: 50,}}>
-            {props.children}
-        </Text>
-    </View>
+            <Text style = {{ 
+                fontSize: 50,
+                color: props.corTexto || '#fff',
+            }}>
+                {props.children}
+            </Text>
+        </View>
+    )
 }
